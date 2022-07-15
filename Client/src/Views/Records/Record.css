@@ -263,6 +263,13 @@
   margin-left: -1rem;
 }
 
+/* NIAGADS */
+.wdk-RecordTableContainerHeader {
+  background-color: #f0f1f2;
+  padding: 10px;
+  border-radius: 4px;
+}
+
 .wdk-RecordAttributeName,
 .wdk-RecordMain .wdk-CollapsibleSectionHeader:not(.wdk-RecordSectionHeader) {
   font-size: 1.2em;

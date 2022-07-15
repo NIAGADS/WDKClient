@@ -8,7 +8,7 @@
 .wdk-CollapsibleSectionHeader:before {
   content: '\f0d7';
   font-family: FontAwesome;
-  font-size: 1.2em;
+  /* font-size: 1.2em; */ /* NIAGADS */
   margin-right: .5ex;
   line-height: 1.2em;
 }
