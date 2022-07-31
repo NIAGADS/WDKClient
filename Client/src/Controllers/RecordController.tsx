@@ -154,7 +154,7 @@ class RecordController extends PageController<Props> {
         }
       });
     }
-    headerActions.push({
+   /* headerActions.push({
       label: favoriteId ? 'Remove from favorites' : 'Add to favorites',
       className: ' favorites ',
       iconClassName: loadingFavoritesStatus ? loadingClassName : 'fa fa-lg fa-star',
@@ -167,7 +167,7 @@ class RecordController extends PageController<Props> {
           this.props.addFavorite(record, recordClass.urlSegment);
         }
       }
-    });
+    });*/
 
     if (recordClass.formats.some(format => format.scopes.includes('record'))) {
       headerActions.push({
