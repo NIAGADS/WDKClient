@@ -1,18 +1,21 @@
 import React from 'react';
 import { wrappable } from 'wdk-client/Utils/ComponentUtils';
 import { getId, getDisplayName, isIndividual } from 'wdk-client/Utils/CategoryUtils';
+import { doesNotReject } from 'assert';
 
 let RecordNavigationItem = ({node: category, path, activeCategory, checked, onSectionToggle}) => {
   let id = getId(category);
   let activeId = activeCategory && getId(activeCategory);
-  let displayName = getDisplayName(category)
+  // strip out anything in parantheses / truncate to ~20 characters (without breaking words)
+  let displayName = getDisplayName(category).replace(/\(.+\)/, '').replace(/.{20}\S*\s+/g, "$&@").split(/\s+@/)[0];
 
   let enumeration = isIndividual(category)
     ? null
     : path.map(n => n + 1).join('.');
 
+  let divClassName = path.length == 1 ? "wdk-RecordNavigationSectionItem wdk-RecordNavigationItem" : "wdk-RecordNavigationItem";
   return (
-    <div className="wdk-RecordNavigationItem">
+    <div className={divClassName}>
       {activeId === id ? (
         <i className="fa fa-circle wdk-Link wdk-RecordNavigationIndicator"/>
       ) : null}
