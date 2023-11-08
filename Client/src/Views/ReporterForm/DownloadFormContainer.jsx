@@ -15,7 +15,7 @@ let ReporterSelect = props => {
   return (
     <div style={{ margin: '20px 0'}}>
       <div style={nestedDivStyle}>
-        <span style={{marginRight:'0.5em', fontWeight:'bold'}}>Choose a Report:</span>
+        <span style={{marginRight:'0.5em', fontWeight:'bold'}}>Select report format:</span>
       </div>
       <div style={nestedDivStyle}>
         <RadioList items={items} value={selected} onChange={onChange}/>
